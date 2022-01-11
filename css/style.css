@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*====== General ======*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #040404;
+    color: #fff;
+    background: transparent;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    background: #040404 url(../images/main-back-dark.png) top right no-repeat;
+    left: 0;
+    background-size: cover;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+a{
+    color: #18d26e;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #35e888;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+}
+
+/*====== Header ======*/
+#header{
+    transition: ease-in-out 0.3s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#header *{
+    transition: ease-in-out 0.3s;
+}
+
+#header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header h1{
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header h1 a, 
+#header h1 a:hover{
+    color: #fff;
+}
+
+#header h2{
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#header h2 span{
+    color: #fff;
+    border-bottom: 2px solid #18d26e;
+    padding-bottom: 6px;
+}
+
+#header h2 span:hover{
+    color: #fff;
+    border-bottom: 2px solid #1f96e6;
+}
+
+#header .social-links{
+    margin-top: 15px;
+    display: flex;
+}
+
+#header .social-links a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#header .social-links img{
+    width: 17px;
+}
+
+#header .social-links a:hover{
+    background-color: #18d26e;
+}
+
+.home-area{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*====== Navigation Menu ======*/
+.menu{
+    z-index: 2;
+}
+
+.nav-menu{
+    transition: ease-in-out 0.3s;
+}
+
+.mobile-nav{
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 14px;
+    width: 25px;
+    transition: all 0.4s;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.open{
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    top: 55px;
+    right: 15px;
+    bottom: 60px;
+    left: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out 0.2s;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 10px 0;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.open ul, .open ul li, .open a{
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.open a{
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.open a:hover,
+.open .active a,
+.open li:hover a{
+    color: #18d26e;
+    text-decoration: none;  
+}
+
+.close{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dark{
+    position: fixed;
+    transition: ease-in-out 0.3s;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dark::before{
+    content: "Guilherme Peres";
+    font-size: 25px;
+    line-height: 2;
+    margin-left: 5%;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*====== About Section ======*/
+#about{
+    position: absolute;
+    top: 100px;
+    margin-left: 5.5%;
+    z-index: 1;
+}
+
+.about-me{
+    position: fixed;
+    max-width: 90vw;
+    height: auto;
+    top: -15px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out 0.5s;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    transform: translateY(30%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.about .show{
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-me h2{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.about-me h2::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 1.5px;
+    margin-top: 9px;
+    margin-left: 72px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.subtitle{
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.about-me .content h3{
+    color: #18d26e;
+}
+
+.about-me .content ul{
+    list-style: none;
+    padding: 0;
+}
+
+.about-me .content ul li{
+    padding-bottom: 10px;
+}
+
+.img-fluid{
+    max-width: 40%;
+    border-radius: 30px;
+    margin-top: 0%;
+    margin-left: 30%;
+    transition: ease-in-out 0.5s;
+    transform: translateX(-40%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-fluid-left{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.show-fluid{
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrow{
+    padding-right: 7px;
+    padding-bottom: 3px;
+}
+
+.about-me .content p:last-child{
+    margin-bottom: 0;
+}
+
+.about-italic{
+    font-style: italic;
+}
+
+/*====== Skills ======*/
+.skills{
+    padding: 0 20px;
+}
+
+.skills .progress{
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.skills .progress .skill{
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.skills .progress .skill .val{
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.skills .progress-bar{
+    width: 0px;
+    height: 10px;
+    transition: .9s;
+    background-color: #18d26e;
+}
+
+/*====== Projects Section ======*/
+#projects-section{
+    position: absolute;
+    top: 100px;
+    margin-left: 5.5%;
+    z-index: 1;
+}
+
+.projects-container{
+    margin: 0 10px;
+}
+
+.projects{
+    position: fixed;
+    max-width: 90vw;
+    height: auto;
+    top: -15px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out 0.5s;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    transform: translateY(30%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.projects-section .show{
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.projects h2{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    margin-left: 21px;
+}
+
+.projects h2::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 1.5px;
+    margin-top: 9px;
+    margin-left: 106px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.projects .subtitle{
+    margin-left: 20px;
+}
+
+.projects .icon-box{
+    text-align: center;
+    background-color: rgba(204, 204, 204, 0.1);
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+}
+
+.projects .projects-container a{
+    cursor: pointer;
+    color: white;
+}
+
+.projects .icon-box .icon{
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #18d26e;
+    border-radius: 5px;
+    transition: all .3s ease-in-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+}
+
+.projects .icon-box .icon::before{
+    position: absolute;
+    content: "";
+    transform: translateX(-8px) translateY(-8px) translateZ(-1px);
+    height: 65px;
+    width: 65px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    transition: all .3s ease-in-out 0s;
+}
+
+.projects .icon-box .icon .imgGit{
+    width: 33px;
+}
+
+.projects .icon-box h4{
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.projects .icon-box h4{
+    color: #fff;
+}
+
+.projects .icon-box p{
+    line-height: 24px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.projects .icon-box:hover{
+    background: #17b461;
+    border-color: #17b461;
+}
+
+.projects .icon-box:hover .icon{
+    background: #fff;
+}
+
+.projects .icon-box:hover .icon::before{
+    background-color: #35e888;
+}
+
+/*===== credits =====*/
+.credits{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;    
+}
+
+.credits span{
+    color: #18d26e;
+    transition: 0.3s;
+}
+
+.credits span:hover{
+    color: #fff;
+}
+
+
+/*====== responsiveness ======*/
+@media screen and (min-width:700px){
+    .img-fluid{
+        max-width: 35%;
+        margin-left: 33%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .projects .icon-box{
+        min-height: 408px;
+    }
+}
+
+@media screen and (min-width:800px){
+    .img-fluid{
+        max-width: 30%;
+        margin-left: 35%;
+    }
+}
+
+@media screen and (min-width:992px){
+    /* General */
+    body::before{
+        content: "";
+        position: fixed;
+        background: #040404 url(../images/main-back.png) top right no-repeat;
+        left: 0;
+        background-size: cover;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    /* Header */
+    #header h1{
+        font-size: 48px;
+    }
+
+    #header h2{
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    #header .social-links{
+        margin-top: 40px;
+    }
+
+    #header .social-links a{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #header .container{
+        align-items: flex-start;
+    }
+    
+    /*Navigation Menu*/
+    .mobile-nav{
+        display: none;
+    }
+
+    .nav-menu{
+        display: block;
+        position: fixed;
+        top: 25px;
+        margin-left: 70%;
+    }
+
+    .nav-menu ul{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-menu li + li{
+        margin-left: 30px;
+    }
+
+    .nav-menu a{
+        display: block;
+        position: relative;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .nav-menu a::before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        bottom: -4px;
+        background-color: #18d26e;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    
+    .nav-menu a:hover::before,
+    .nav-menu li:hover a::before,
+    .nav-menu .active a::before{
+        visibility: visible;
+        width: 25px;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu li:hover a,
+    .nav-menu .active a{
+        color: #fff;
+    }
+
+    .dark{
+        position: fixed;
+        transition: ease-in-out 0.3s;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 80px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .dark::before{
+        content: "Guilherme Peres";
+        font-size: 32px;
+        line-height: 2.5;
+        margin-left: 7%;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /*About Section*/
+    .about-me{
+        top: 0px;
+    }
+
+    .img-fluid{
+        max-width: 70%;
+        margin-top: 5%;
+        margin-left: 17%;
+    }
+
+    /*Projects Section*/
+    .projects{
+        top: 0px;
+    }
+
+    .projects .icon-box{
+        min-height: 432px;
+    }
+
+    /*Credits*/
+    .credits{
+        text-align: right;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width:1300px){
+    /*About Section*/
+    .img-fluid{
+        max-width: 65%;
+    }
+
+    .about-me .content p{
+        max-width: 810px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    /*About Section*/
+    .img-fluid{
+        max-width: 55%;
+        margin-left: 20%;
+    }
+}

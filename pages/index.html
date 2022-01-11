@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../images/icons/favicon.png" rel="icon">
+    <title>Guilherme Peres</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="home-area" id="home-area">
+                <h1><a href="./index.html">Guilherme Peres</a>
+                    <!--<img src="../images/icons/language.svg">-->
+                </h1>
+                <h2>Analista e <span>Desenvolvedor</span> de Sistemas</h2>
+
+                <!-- social links -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/guilhermeperesmoreno/" class="linkedin" target="_blank"><img
+                            src="../images/icons/linkedin.svg"></a>
+                    <a href="https://github.com/GuilhermePeres" class="github" target="_blank"><img
+                            src="../images/icons/github.svg"></a>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="menu">
+                <img src="../images/icons/bar.svg" id="imgNav" class="mobile-nav" onclick="togglerNav(this)">
+                <span id="bg-dark" class="dark"></span>
+                <nav class="nav-menu mobile-nav-toggle open close" id="navMenu">
+                    <ul>
+                        <li class="" id="home-menu" onclick="changeMenu(this)"><a href="#header">Home</a></li>
+                        <li class="" id="about-menu" onclick="changeMenu(this)"><a href="#">Sobre</a></li>
+                        <li class="" id="projects-menu" onclick="changeMenu(this)"><a href="#">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-me container" id="about-me">
+            <div class="section-title">
+                <h2>Sobre</h2>
+                <p class="subtitle">Saiba mais sobre mim</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <img src="../images/ProfilePicture.png" class="img-fluid" id="img-profile">
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h3>Analista e Desenvolvedor de Sistemas</h3>
+                    <p class="about-italic">Ser desenvolvedor é uma viagem onde a próxima parada é a realização de um
+                        sonho.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Aniversário:
+                                    </strong>3 agosto 2001
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Idiomas:
+                                    </strong>Inglês e Português.
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Cidade:
+                                    </strong>Sorocaba, SP, Brasil
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Linkedin:
+                                    </strong><a class="link" href="https://www.linkedin.com/in/guilhermeperesmoreno/"
+                                        target="_blank">guilhermeperesmoreno</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Idade: </strong>20
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>Faculdade:
+                                    </strong>Fatec Sorocaba
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>E-mail:
+                                    </strong>gs.peres@outlook.com
+                                </li>
+                                <li>
+                                    <img class="arrow" src="../images/icons/arrow-right.svg"><strong>GitHub:
+                                    </strong><a class="link" href="https://github.com/GuilhermePeres"
+                                        target="_blank">GuilhermePeres</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas, cursando o último semestre.<br>
+                        Tenho grande interesse pela área desenvolvimento, e grandes habilidades com as tecnologias
+                        HTML5, CSS3 e JavaScript. Desenvolvi meu TCC, um software web para Recursos Humanos -
+                        Recrutamento e Seleção, automatizando todos os processos-chave, nele foi utilizado PHP8,
+                        JavaScipt, HTML5, CSS3, SQL e Bootstrap.<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills">
+                <div class="row skills-content">
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">HTML<i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" id="html"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">CSS<i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" id="css"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">JavaScipt<i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100" id="js"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Bootstrap<i class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                    aria-valuemax="100" id="bts"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">C<i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100" id="c"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">PL/SQL<i class="val">60%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                    aria-valuemax="100" id="pl-sql"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">T-SQL<i class="val">60%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                    aria-valuemax="100" id="t-sql"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Java<i class="val">50%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                    aria-valuemax="100" id="java"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-section" class="projects-section">
+        <div class="projects container" id="projects-area">
+            <div class="section-title">
+                <h2>Projetos</h2>
+                <p class="subtitle">Meus Projetos</p>
+            </div>
+            <div class="projects-container row">
+                <div class="col-lg-4 col-md-6">
+                    <a href="./project4/index.html" target="_blank">
+                        <div class="icon-box" onmouseover="changeIconOver(this)" onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img src="../images/icons/web.svg"></div>
+                            <h4>Jogo da Vida</h4>
+                            <p>Esse projeto é uma versão do Jogo da Vida, criado pelo matemático John Horton Conway em
+                                1970, projetado de forma responsiva.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <a href="./project1/principal/index.html" target="_blank">
+                        <div class="icon-box" onmouseover="changeIconOver(this)" onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img src="../images/icons/web.svg"></div>
+                            <h4>Notícias Cidade</h4>
+                            <p>Site de notícias projetado com diferentes estruturas de layouts e barras de navegação
+                                vertical e horizontal.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <a href="./project2/index.html" target="_blank">
+                        <div class="icon-box" onmouseover="changeIconOver(this)" onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img src="../images/icons/web.svg"></div>
+                            <h4>TecBlog</h4>
+                            <p>Blog de tecnologia projetado com área de postagens, estrutura de menu, postagens recentes
+                                e categorias.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <a href="./project3/index.html" target="_blank">
+                        <div class="icon-box" onmouseover="changeIconOver(this)" onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img src="../images/icons/web.svg"></div>
+                            <h4>Chalé Hotel</h4>
+                            <p>Site de hotel projetado com layout líquido, menu vertical, área de descrição e destaques.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <a href="https://github.com/GuilhermePeres/MGTEC-RH-TCC-" target="_blank">
+                        <div id="gitIcon" class="icon-box" onmouseover="changeIconOver(this)"
+                            onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img class="imgGit" src="../images/icons/github.svg"></div>
+                            <h4>MGTEC-RH TCC</h4>
+                            <p>Trabalho de conclusão de curso. Software web para Recursos Humanos - Recrutamento e
+                                Seleção utilizando PHP8, JavaScipt, HTML5, CSS3, SQL e Bootstrap.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <a target="_blank">
+                        <div class="icon-box" onmouseover="changeIconOver(this)" onmouseleave="changeIconLeave(this)">
+                            <div class="icon"><img src="../images/icons/web.svg"></div>
+                            <h4>Lorem Ipsum</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquam, fugit
+                                corrupti,
+                                eius voluptatum.</p>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <div class="credits">
+        Copyright © 2021 - <span>Guilherme Peres</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

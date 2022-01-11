@@ -1,0 +1,139 @@
+/*Configuração da página*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:skyblue;
+}
+
+/*game*/
+#grade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 99.8%;
+    border: 1px solid black;
+    border-bottom: 0px;
+    border-radius: 40px 40px 0px 0px;
+    box-shadow: 0px 0px 50px 5px #1e2c3a;
+    background-color: whitesmoke;
+}
+
+.screen{
+    width: 85%;
+    height: 85%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.table{
+    width: 100%;
+}
+
+table, td{
+    border-collapse: collapse;
+    border: 1px solid #ffffff;
+}
+
+.alive{
+    background-color: goldenrod;
+    border-color: black;
+}
+
+.dead{
+    background-color: #c7c6c6;
+}
+
+/*botões*/
+.buttonsArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 11%;
+}
+
+.btnPlay, .btnPause, .btnReset{
+    cursor:pointer;
+    width: 25%;
+    height: 59%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 0px black;
+    color: white;
+}
+
+.btnPlay{
+    background-color: #008000;
+    border: 1px solid #073d07;
+}
+
+.btnPlay:disabled{
+    cursor: auto;
+    background-color: hsla(120, 100%, 25%, 0.35);
+} 
+
+.btnPause:disabled{
+    cursor: auto;
+    background-color: hsla(44, 90%, 47%, 0.40);
+}
+
+.btnPause{
+    background-color: #e2a90c;
+    border: 1px solid rgb(107, 98, 16);
+}
+
+
+.btnReset{
+    background-color: brown;
+    border: 1px solid rgb(43, 16, 16);
+}
+
+.btnPlay:hover:not(:disabled){
+    background-color: #05ca05;
+}
+
+.btnPause:hover:not(:disabled){
+    background-color: #e4ce0d;
+}
+
+.btnReset:hover{
+    background-color: rgb(255, 58, 58);
+}
+
+/*@media screens*/
+@media screen and (min-width:568px){
+    #grade{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:768px){
+    #grade{
+        width: 55%;
+    }
+}
+
+@media screen and (min-width:992px){
+    #grade{
+        width: 45%;
+    }
+}
