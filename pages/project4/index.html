@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Vida</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 
 <body>
@@ -22,9 +23,41 @@
                 <button type="button" class="btnReset" onclick="Reset()">RESET</button>
             </div>
         </div>
+
+        <div class="popup-container" id="popup-info">
+            <div class="popup-content">
+                <div class="popup-close" title="Close" onclick="Close(this)">
+                    <img src="../images/close.svg">
+                </div>
+
+                <!-- <img src="../images/info.svg" class="popup-img"> -->
+
+                <h1 class="popup-title">Regras</h1>
+
+                <p class="popup-description">
+                    <br> 1 - Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.<br><br>
+                    2 - Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.<br><br>
+                    3 - Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.<br><br>
+                    4 - Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo estado para a próxima
+                    geração.<br><br>
+                    Para jogar você deve escolher um estado inicial de células vivas e mortas clicando sobre as células
+                    da tabela. Células mortas são representadas pela cor cinza e células vivas são representadas pela
+                    cor amarela.<br><br>
+
+                    O botão "PLAY" irá iniciar a evolução subsequente das células, em que a tabela se modifica em
+                    pequenas passagens de tempo, podendo a população(células vivas) crescerem sem limite, sumirem
+                    completamente ou se manterem imutáveis.
+                </p>
+
+                <button type="button" class="popup-btn popup-btn-width" onclick="Close(this)">
+                    Entendi!
+                </button>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
 </body>
 
 </html>
